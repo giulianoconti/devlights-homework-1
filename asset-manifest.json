@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/devlights-homework-1/static/css/main.668d3e91.css",
+    "main.js": "/devlights-homework-1/static/js/main.4fe5c369.js",
+    "static/media/backgroundBlack.png": "/devlights-homework-1/static/media/backgroundBlack.df03cdb13083527c838e.png",
+    "static/media/backgroundBlue.png": "/devlights-homework-1/static/media/backgroundBlue.91e910969abdaaee0f9a.png",
+    "static/media/clearText.svg": "/devlights-homework-1/static/media/clearText.6c45e00b1ab59fa08a0eca36ff66624b.svg",
+    "index.html": "/devlights-homework-1/index.html",
+    "static/media/hidePassword.svg": "/devlights-homework-1/static/media/hidePassword.8e4f7923c36e03e5d4665d43c377f370.svg",
+    "static/media/showPassword.svg": "/devlights-homework-1/static/media/showPassword.9cc8a126dbd6654a7325961381bfed97.svg",
+    "static/media/errorPassword.svg": "/devlights-homework-1/static/media/errorPassword.956a5f48f6e576dc65e6ed47a13670b4.svg",
+    "static/media/loginSuccess.svg": "/devlights-homework-1/static/media/loginSuccess.491c7c33a15eba9f6b6ba1f3d0b86a12.svg",
+    "main.668d3e91.css.map": "/devlights-homework-1/static/css/main.668d3e91.css.map",
+    "main.4fe5c369.js.map": "/devlights-homework-1/static/js/main.4fe5c369.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.668d3e91.css",
+    "static/js/main.4fe5c369.js"
+  ]
+}
