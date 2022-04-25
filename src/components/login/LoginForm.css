@@ -19,7 +19,6 @@
     text-align: center;
 }
 
-
 .login-form-title {
     font-style: normal;
     font-weight: 400;
@@ -45,7 +44,6 @@
     width: 700px;
     outline: none;
     border: none;
-
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -69,7 +67,7 @@
 
 .log-in-link {
     cursor: pointer;
-    color: #666666;
+    color: #999999;
 }
 
 .log-in-link:hover {
@@ -83,6 +81,20 @@
     margin: 25px 0 40px 0;
 }
 
+.type label,
+option {
+    color: #999999;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.type select {
+    color: #999999;
+    border: 1px solid #999999;
+    font-style: normal;
+    font-weight: 400;
+}
+
 .login-form-select {
     color: #666666;
     font-style: normal;
@@ -93,7 +105,7 @@
 }
 
 .login-form-button {
-    background: rgba(33, 72, 192, 0.9);
+    background: rgba(147, 33, 192, 0.9);
     border: none;
     border-radius: 10px;
     height: 73px;
@@ -103,6 +115,10 @@
     font-size: 24px;
     line-height: 32px;
     color: #FFFFFF;
+}
+
+.login-form-button:hover {
+    background: rgb(147, 33, 192);
 }
 
 .login-form-button-student:hover {
@@ -121,10 +137,10 @@
     line-height: 32px;
     color: #FFFFFF;
 }
+
 .login-form-button-student:hover {
     background: rgb(33, 72, 192);
 }
-
 
 .login-form-button-teacher {
     background: rgba(0, 0, 0, 0.9);
@@ -138,6 +154,7 @@
     line-height: 32px;
     color: #FFFFFF;
 }
+
 .login-form-button-teacher:hover {
     background: rgb(0, 0, 0);
 }
@@ -149,7 +166,8 @@
     z-index: 1;
 }
 
-@media (max-width: 1280px), (max-height: 1000px) {
+@media (max-width: 1280px),
+(max-height: 1000px) {
     .login-form-container {
         border-radius: 10px;
         width: calc(750px / 1.4);
@@ -161,7 +179,6 @@
         line-height: calc(29px / 1.4);
         margin-bottom: calc(20px / 1.4);
     }
-
 
     .login-form-title {
         font-size: calc(24px / 1.4);
@@ -189,7 +206,7 @@
     }
 
     .eye-password img {
-        margin-top: calc(20px / 1.4);
+        margin-top: 10px;
     }
 
     .type {
@@ -237,7 +254,8 @@
     }
 
     .eye-password img {
-        margin-top: calc(20px / 2);
+        width: 15px;
+        margin-top: 12px;
     }
 }
 
@@ -263,8 +281,8 @@
         width: 12px;
         margin-top: 15px;
     }
+
     .type {
         margin: 5px 0;
     }
 }
-

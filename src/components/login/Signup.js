@@ -19,11 +19,17 @@ export const Signup = ({ showFormLogIn }) => {
     const handleSubmit = e => {
         e.preventDefault();
         if (name.length > 0 && surname.length > 0 && email.length > 0 && password.length > 0) {
-            window.localStorage.setItem('name', name);
-            window.localStorage.setItem('surname', surname);
-            window.localStorage.setItem('email', email);
-            window.localStorage.setItem('password', password);
-            window.localStorage.setItem('type', type);
+            if (window.localStorage.getItem('name') === null) {
+                window.localStorage.setItem('name', name);
+                window.localStorage.setItem('surname', surname);
+                window.localStorage.setItem('email', '"' + email + '"');
+                window.localStorage.setItem('password', '"' + password + `-${type}"`);
+            } else {
+                window.localStorage.setItem('name', [window.localStorage.getItem('name'), name]);
+                window.localStorage.setItem('surname', [window.localStorage.getItem('surname'), surname]);
+                window.localStorage.setItem('email', [window.localStorage.getItem('email'), '"' + email + '"']);
+                window.localStorage.setItem('password', [window.localStorage.getItem('password'), '"' + password + `-${type}"`]);
+            }
             showFormLogIn();
         } else {
             setError('Fill all fields.');
@@ -31,10 +37,12 @@ export const Signup = ({ showFormLogIn }) => {
     }
 
     const handleNameChange = e => {
-        setName(e.target.value);
+        const name = e.target.value;
+        setName(name.replace(/\b(\w)/g, s => s.toUpperCase()));
     }
     const handleSurnameChange = e => {
-        setSurname(e.target.value);
+        const surname = e.target.value;
+        setSurname(surname.replace(/\b(\w)/g, s => s.toUpperCase()));
     }
     const handleEmailChange = e => {
         setEmail(e.target.value);
@@ -65,7 +73,7 @@ export const Signup = ({ showFormLogIn }) => {
             {
                 (error.length > 0) && (<div className="login-form-error"><img src={errorPassword} alt='error password'></img>{error}</div>)
             }
-            <div className='login-form-title'>Please fill in your unique admin login details below</div>
+            <div className='login-form-title'>Please fill in your unique admin signup details below</div>
             <label htmlFor='name' className='login-form-input-label'>Name</label>
             <div>
                 <input name='name' autoComplete='off' id='name' type='name' className='login-form-input' value={name} onChange={handleNameChange} />

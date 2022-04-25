@@ -12,7 +12,7 @@ export const Login = () => {
     const logged = () => {
         setIsLogged(true);
         window.localStorage.setItem('isLogged', 'true');
-        window.localStorage.setItem('guy', studentOrTeacher);
+        window.localStorage.setItem('typeLogged', studentOrTeacher);
     }
     const unLogged = () => {
         setStudentOrTeacher('student');
@@ -38,8 +38,8 @@ export const Login = () => {
                         </section>
 
                     ) : (
-                        <section className={`login-form-${isLogged ? window.localStorage.getItem('type') : studentOrTeacher}`}>
-                            <h5 className='student-or-teacher'>{isLogged ? window.localStorage.getItem('type') : studentOrTeacher}</h5>
+                        <section className={`login-form-${isLogged ? window.localStorage.getItem('typeLogged') : studentOrTeacher}`}>
+                            <h5 className='student-or-teacher'>{isLogged ? window.localStorage.getItem('typeLogged') : studentOrTeacher}</h5>
                             {
                                 isLogged
                                     ? <LoginFormSuccess unLogged={unLogged} />

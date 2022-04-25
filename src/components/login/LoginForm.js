@@ -14,13 +14,17 @@ export const LoginForm = ({ logged, showFormSignUp, studentOrTeacher, setStudent
 
     const handleSubmit = e => {
         e.preventDefault();
+        const arrayEmail = JSON.parse('[' + window.localStorage.getItem('email') + ']');
+        const arrayPassword = JSON.parse('[' + window.localStorage.getItem('password') + ']');
         if (email.trim().length < 1 || password.trim().length < 1) {
             setError('Please fill in all fields');
         } else if (studentOrTeacher === 'student') {
-            if (email === window.localStorage.getItem('email')) {
-                if (password === window.localStorage.getItem('password')) {
-                    if (window.localStorage.getItem('type') === 'student') {
+            if (arrayEmail.includes(email)) {
+                const userPosition = arrayEmail.indexOf(email);
+                if (arrayPassword[userPosition].includes(password + '-')) {
+                    if (arrayPassword[userPosition] === password + '-student') {
                         setError('');
+                        window.localStorage.setItem('emailLogged', email);
                         logged();
                     } else {
                         setError('You are not a student. Try again.');
@@ -32,10 +36,12 @@ export const LoginForm = ({ logged, showFormSignUp, studentOrTeacher, setStudent
                 setError('Incorrect Email. Try again.');
             }
         } else {
-            if (email === window.localStorage.getItem('email')) {
-                if (password === window.localStorage.getItem('password')) {
-                    if (window.localStorage.getItem('type') === 'teacher') {
+            if (arrayEmail.includes(email)) {
+                const userPosition = arrayEmail.indexOf(email);
+                if (arrayPassword[userPosition].includes(password + '-')) {
+                    if (arrayPassword[userPosition] === password + '-teacher') {
                         setError('');
+                        window.localStorage.setItem('emailLogged', email);
                         logged();
                     } else {
                         setError('You are not a teacher. Try again.');

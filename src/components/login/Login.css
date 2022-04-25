@@ -1,3 +1,7 @@
+* {
+    font-family: 'Inter';
+}
+
 .login-form-student {
     display: flex;
     background-image: url('./png/backgroundBlue.png');
