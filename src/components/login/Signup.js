@@ -14,7 +14,7 @@ export const Signup = ({ showFormLogIn }) => {
         if (name.trim().length < 1 || surname.trim().length < 1 || email.trim().length < 1 || password.trim().length < 1) {
             console.log('Complete todos los campos')
         } else {
-            console.log('[ Nombre: ' + name, ']-[ Apellido: ' + surname, ']-[ Correo: ' + email, ']-[ Contraseña: ' + password, ']-[ Tipo: ' + tipo  + ' ]');
+            console.log('[ Nombre: ' + name, ']-[ Apellido: ' + surname, ']-[ Correo: ' + email, ']-[ Contraseña: ' + password, ']-[ Tipo: ' + tipo + ' ]');
         }
     }
 
@@ -37,23 +37,15 @@ export const Signup = ({ showFormLogIn }) => {
 
     return (
         <form className='login-form-container'>
-            <div className='login-form-title'>Complete a continuación sus datos de para registrarse</div>
+            <div className='login-form-title'>Complete a continuación sus datos para registrarse</div>
             <label htmlFor='name' className='login-form-input-label'>Nombre</label>
-            <div>
-                <input name='name' autoComplete='off' id='name' type='name' className='login-form-input' value={name} onChange={handleNameChange} />
-            </div>
+            <input name='name' autoComplete='off' id='name' type='name' className='login-form-input' value={name} onChange={handleNameChange} />
             <label htmlFor='surname' className='login-form-input-label'>Apellido</label>
-            <div>
-                <input name='surname' autoComplete='off' id='surname' type='name' className='login-form-input' value={surname} onChange={handleSurnameChange} />
-            </div>
+            <input name='surname' autoComplete='off' id='surname' type='name' className='login-form-input' value={surname} onChange={handleSurnameChange} />
             <label htmlFor='email' className='login-form-input-label'>Correo electrónico</label>
-            <div>
-                <input name='email' autoComplete='off' id='email' type='email' className='login-form-input' value={email} onChange={handleEmailChange} />
-            </div>
+            <input name='email' autoComplete='off' id='email' type='email' className='login-form-input' value={email} onChange={handleEmailChange} />
             <label htmlFor='password' className='login-form-input-label'>Contraseña</label>
-            <div>
-                <input name='password' autoComplete='off' id='password' value={password} type='password' className='login-form-input' onChange={handlePasswordChange} />
-            </div>
+            <input name='password' autoComplete='off' id='password' value={password} type='password' className='login-form-input' onChange={handlePasswordChange} />
             <div className='type'>
                 <div className='log-in-link' onClick={showFormLogIn}>Iniciar sesión</div>
                 <div>

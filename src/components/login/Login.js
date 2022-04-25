@@ -38,11 +38,11 @@ export const Login = () => {
                         </section>
 
                     ) : (
-                        <section className={`login-form-${isLogged ? window.localStorage.getItem('type') : studentOrTeacher}`}>
+                        <section className={`login-form-${isLogged ? window.localStorage.getItem('guy') : studentOrTeacher}`}>
                             <h5 className='student-or-teacher'>Inicio de sesión de administrador de Stax Food</h5>
                             {
                                 isLogged
-                                    ? <LoginFormSuccess unLogged={unLogged} studentOrTeacher={studentOrTeacher} />
+                                    ? <LoginFormSuccess unLogged={unLogged} />
                                     : <LoginForm logged={logged} studentOrTeacher={studentOrTeacher} setStudentOrTeacher={setStudentOrTeacher} showFormSignUp={showFormSignUp} />
                             }
                         </section>

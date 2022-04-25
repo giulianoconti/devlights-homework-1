@@ -19,7 +19,6 @@
     text-align: center;
 }
 
-
 .login-form-title {
     font-style: normal;
     font-weight: 400;
@@ -40,31 +39,16 @@
 
 .login-form-input {
     background: #F5F5F5;
-    border-radius: 10px 0 0 10px;
+    border-radius: 10px;
     height: 58px;
-    width: 700px;
+    width: 750px;
     outline: none;
     border: none;
-
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 32px;
     color: #666666;
-}
-
-.eye-password {
-    background: #F5F5F5;
-    border-radius: 0 10px 10px 0;
-    position: absolute;
-    height: 60px;
-    text-align: center;
-    width: 50px;
-}
-
-.eye-password img {
-    cursor: pointer;
-    margin-top: 20px;
 }
 
 .log-in-link {
@@ -82,11 +66,14 @@
     justify-content: space-between;
     margin: 25px 0 40px 0;
 }
-.type label, option {
+
+.type label,
+option {
     color: #999999;
     font-style: normal;
     font-weight: 400;
 }
+
 .type select {
     color: #999999;
     border: 1px solid #999999;
@@ -115,12 +102,9 @@
     line-height: 32px;
     color: #FFFFFF;
 }
+
 .login-form-button:hover {
     background: rgb(147, 33, 192);
-}
-
-.login-form-button-student:hover {
-    background: rgb(33, 72, 192);
 }
 
 .login-form-button-student {
@@ -139,7 +123,6 @@
 .login-form-button-student:hover {
     background: rgb(33, 72, 192);
 }
-
 
 .login-form-button-teacher {
     background: rgba(0, 0, 0, 0.9);
@@ -192,21 +175,11 @@
     }
 
     .login-form-input {
-        border-radius: 10px 0 0 10px;
+        border-radius: 10px;
         height: calc(58px / 1.4);
-        width: calc(700px / 1.4);
+        width: calc(750px / 1.4);
         font-size: calc(24px / 1.4);
         line-height: calc(32px / 1.4);
-    }
-
-    .eye-password {
-        border-radius: 0 10px 10px 0;
-        height: calc(60px / 1.4);
-        width: calc(50px / 1.4);
-    }
-
-    .eye-password img {
-        margin-top: calc(20px / 1.4);
     }
 
     .type {
@@ -246,15 +219,7 @@
     }
 
     .login-form-input {
-        width: calc(700px / 2);
-    }
-
-    .eye-password {
-        width: calc(50px / 2);
-    }
-
-    .eye-password img {
-        margin-top: calc(20px / 2);
+        width: calc(750px / 2);
     }
 }
 
@@ -265,20 +230,11 @@
     }
 
     .login-form-input {
-        width: calc(700px / 3);
+        width: calc(750px / 3);
     }
 
     .login-form-input-label {
         margin: 5px 0;
-    }
-
-    .eye-password {
-        width: calc(50px / 3);
-    }
-
-    .eye-password img {
-        width: 12px;
-        margin-top: 15px;
     }
 
     .type {
