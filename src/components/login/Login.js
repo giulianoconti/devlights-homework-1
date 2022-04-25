@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Signup } from './Signup';
-import './Login.css';
 import { LoginForm } from './LoginForm';
 import { LoginFormSuccess } from './LoginFormSuccess';
+import './Login.css';
 
 export const Login = () => {
     const [isLogged, setIsLogged] = useState(window.localStorage.getItem('isLogged') === 'true' ? true : false);
@@ -39,10 +39,10 @@ export const Login = () => {
 
                     ) : (
                         <section className={`login-form-${isLogged ? window.localStorage.getItem('type') : studentOrTeacher}`}>
-                            <h5 className='student-or-teacher'>{isLogged ? window.localStorage.getItem('type') : studentOrTeacher}</h5>
+                            <h5 className='student-or-teacher'>Inicio de sesión de administrador de Stax Food</h5>
                             {
                                 isLogged
-                                    ? <LoginFormSuccess unLogged={unLogged} />
+                                    ? <LoginFormSuccess unLogged={unLogged} studentOrTeacher={studentOrTeacher} />
                                     : <LoginForm logged={logged} studentOrTeacher={studentOrTeacher} setStudentOrTeacher={setStudentOrTeacher} showFormSignUp={showFormSignUp} />
                             }
                         </section>

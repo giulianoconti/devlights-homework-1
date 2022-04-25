@@ -1,13 +1,12 @@
-import loginSuccess from './svg/loginSuccess.svg';
 import './LoginFormSuccess.css';
 
-export const LoginFormSuccess = ({ unLogged }) => {
+export const LoginFormSuccess = ({ unLogged, studentOrTeacher }) => {
     return (
         <div className="login-form-success-container">
-            <h2 className='login-form-success-title'>Successful Login! <img className='login-form-success-check' src={loginSuccess} alt='login success'></img></h2>
-            <h3 className='login-form-success-email'>Email: {window.localStorage.getItem('email')}</h3>
-            <h3 className='login-form-success-type'>Type: {window.localStorage.getItem('type')}</h3>
-            <button className={`login-form-success-button-${window.localStorage.getItem('type')}`} type='submit' onClick={unLogged}>Log Out</button>
+            <h2 className='login-form-success-title'>Ingreso exitoso!</h2>
+            <h3 className='login-form-success-email'>Correo electrónico: alumno@test.com</h3>
+            <h3 className='login-form-success-type'>Tipo: {studentOrTeacher === 'student' ? 'alumno' : 'profesor'}</h3>
+            <button className={`login-form-success-button`} type='submit' onClick={unLogged}>Log Out</button>
         </div>
     )
 }
