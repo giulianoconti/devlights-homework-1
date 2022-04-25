@@ -1,0 +1,56 @@
+
+.login-form-success-container {
+    background-color:white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter';
+    max-width: 500px;
+    padding: 20px;
+}
+
+.login-form-success-title {
+    text-align: center;
+}
+
+.login-form-success-check {
+    background-color: rgb(0, 150, 0);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    margin: auto;
+    padding: 5px;
+    vertical-align: middle;
+    width: 28px;
+}
+
+.login-form-success-button-student {
+    background: rgba(33, 72, 192, 0.9);
+    border: none;
+    border-radius: 10px;
+    height: 73px;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+.login-form-success-button-student:hover {
+    background: rgb(33, 72, 192);
+}
+
+.login-form-success-button-teacher {
+    background: rgba(0, 0, 0, 0.9);
+    border: none;
+    border-radius: 10px;
+    height: 73px;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+.login-form-success-button-teacher:hover {
+    background: rgb(0, 0, 0);
+}

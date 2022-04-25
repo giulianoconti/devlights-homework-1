@@ -1,0 +1,39 @@
+.login-form-student {
+    display: flex;
+    background-image: url('./png/backgroundBlue.png');
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form-teacher {
+    align-items: center;
+    background-image: url('./png/backgroundBlack.png');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+
+}
+
+.login-form-signup {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    background-color: #531061;
+}
+
+.student-or-teacher {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 0px;
+    margin: 0
+}
